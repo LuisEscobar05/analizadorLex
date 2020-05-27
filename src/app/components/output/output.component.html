@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="table-responsive-md">
+      <table class="table table-bordered table-md">
+        <thead class="thead-dark">
+          <tr>
+            <th class="bg-success e" scope="col">Tokens</th>
+            <th class="bg-warning e2" scope="col">Lexemas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table" *ngFor="let item of data">
+            <td class="token">{{item[0]}}</td>
+            <td class="lexe">{{item[1]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="color: red; font-size: 30px;">{{message}}</p>
+    <br>
+
+    <button (click)="regresar()" class="btn btn-outline-danger btn-md">regresar</button>
+    &nbsp;
+    &nbsp;
+    <button *ngIf="data!=null && message==null" (click)="limpiar()" class="btn btn-outline-danger btn-md">Limpiar tabla</button>
+    <br>
+    <br>
+    <br>
+</div>
+  
